@@ -413,11 +413,10 @@ services:
 
   vector:
     container_name: supabase-vector
-    image: timberio/vector:latest-alpine
+    image: timberio/vector:0.29.0-alpine
     healthcheck:
       test:
         [
-
           "CMD",
           "wget",
           "--no-verbose",
