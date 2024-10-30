@@ -417,7 +417,6 @@ services:
     healthcheck:
       test:
         [
-
           "CMD",
           "wget",
           "--no-verbose",
