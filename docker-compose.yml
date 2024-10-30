@@ -417,6 +417,7 @@ services:
     healthcheck:
       test:
         [
+
           "CMD",
           "wget",
           "--no-verbose",
@@ -424,10 +425,9 @@ services:
           "--spider",
           "http://vector:9001/health"
         ]
-      timeout: 20s
-      interval: 20s
-      retries: 5
-    restart: unless-stopped  
+      timeout: 5s
+      interval: 5s
+      retries: 3
     volumes:
       - ./volumes/logs/vector.yml:/etc/vector/vector.yml:ro
       - ${DOCKER_SOCKET_LOCATION}:/var/run/docker.sock:ro
